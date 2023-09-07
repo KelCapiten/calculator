@@ -22,7 +22,7 @@ buttonArea.addEventListener('click', button => {
                 secondNum = parseFloat(bottomDisplay.value);
                 evaluate(firstNum, secondNum);
                 midDisplay.value += secondNum;
-                bottomDisplay.value = firstNum;
+                bottomDisplay.value = firstNum.toFixed(4);
                 return;
             }
             if (parseFloat(bottomDisplay.value)) {
