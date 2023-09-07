@@ -22,7 +22,7 @@ buttonArea.addEventListener('click', button => {
                 secondNum = parseFloat(bottomDisplay.value);
                 evaluate(firstNum, secondNum);
                 midDisplay.value += secondNum;
-                bottomDisplay.value = firstNum.toFixed(4);
+                bottomDisplay.value = firstNum;
                 return;
             }
             if (parseFloat(bottomDisplay.value)) {
@@ -38,6 +38,7 @@ buttonArea.addEventListener('click', button => {
             midDisplay.value = "";
             topDisplay.value = "";
             firstNum = 0;
+            secondNum = 0;
             return;
         }
 
@@ -91,22 +92,22 @@ function evaluate(a, b) {
     switch (operator) {
         case "+":
             firstNum = a + b;
-            topDisplay.value = firstNum.toFixed(8);
+            topDisplay.value = firstNum;
             break;
 
         case "-":
             firstNum = a - b;
-            topDisplay.value = firstNum.toFixed(8);
+            topDisplay.value = firstNum;
             break;
 
         case "/":
             firstNum = a / b;
-            topDisplay.value = firstNum.toFixed(8);
+            topDisplay.value = firstNum;
             break;
     
         case "*":
             firstNum = a * b;
-            topDisplay.value = firstNum.toFixed(8);
+            topDisplay.value = firstNum;
             break;
 
         default:
