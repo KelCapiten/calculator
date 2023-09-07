@@ -18,16 +18,16 @@ buttonArea.addEventListener('click', button => {
     if (button.target.nodeName == "BUTTON") {
 
         if (button.target.innerText == "=") {
-            if (!isNaN(firstNum)) {
+            if (firstNum && midDisplay.value) {
                 secondNum = parseFloat(bottomDisplay.value);
                 evaluate(firstNum, secondNum);
                 midDisplay.value += secondNum;
                 bottomDisplay.value = firstNum;
                 return;
             }
-            if (parseFloat(bottomDisplay.value)) {
-                firstNum = parseFloat(bottomDisplay.value);
-                topDisplay.value = bottomDisplay.value;
+            if (parseInt(bottomDisplay.value)) {
+                firstNum = parseFloat(bottomDisplay.value) + firstNum;
+                topDisplay.value = firstNum;
                 return;
             }
             return;
