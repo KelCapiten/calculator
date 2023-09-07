@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="mainjs.js" defer></script>
     <title>WebCalc</title>
 </head>
 <body>
@@ -14,19 +15,36 @@
     <div class="mainDive">
         <div class="calcBody">
             <div class="displayArea">
-
+                <input class="history" title="history" type="text" disabled>
+                <input class="mid" title="mid" type="text" disabled>
+                <input class="result" title="result" type="text" disabled>
             </div>
             <div class="buttonArea">
                 <div class="numKeysDiv">
-                    <div class="inner operationKeys keys"></div>
-                    <div class="numKeys"></div>
+                    <div class="numKeys">
+                        <button class="key active inner">c</button>
+                        <button class="key"></button>
+                        <button class="key">Del</button>
+                        <button class="key active">1</button>
+                        <button class="key active">2</button>
+                        <button class="key active">3</button>
+                        <button class="key active">4</button>
+                        <button class="key active">5</button>
+                        <button class="key active">6</button>
+                        <button class="key active">7</button>
+                        <button class="key active">8</button>
+                        <button class="key active">9</button>
+                        <button class="key active">00</button>
+                        <button class="key active">0</button>
+                        <button class="key active">.</button>
+                    </div>
                 </div>
                 <div class="outer operationKeys keys">
-                    <button class="key">/</button>
-                    <button class="key">x</button>
-                    <button class="key">+</button>
-                    <button class="key">-</button>
-                    <button class="key">=</button>
+                    <button class="key active">/</button>
+                    <button class="key active">*</button>
+                    <button class="key active">+</button>
+                    <button class="key active">-</button>
+                    <button style="color: greenyellow; border: solid;" class="key">=</button>
                 </div>
             </div>
         </div>

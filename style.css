@@ -30,19 +30,23 @@ body {
     display: flex;
     flex-direction: column;
     border: 1px solid white;
-    background: linear-gradient(to right bottom, rgba(48, 58, 90, 0.8), rgba(0, 0, 29, 0.8));
+    background: linear-gradient(to right bottom, rgba(48, 58, 90, 0.8), rgb(13, 13, 26), rgba(0, 0, 49, 0.8));
     width: 25rem;
     height: 45rem;
     border-radius: 2rem;
     z-index: 3;
     backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
 }
 
 .displayArea {
-    flex: 1;
+    flex: 1.3;
+    display: flex;
+    flex-direction: column;
     margin: 0.5rem 0.5rem;
     margin-bottom: 0%;
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(1rem);
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
 }
@@ -50,7 +54,8 @@ body {
 .buttonArea {
     flex: 2;
     display: flex;
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(1rem);
     margin-right: 0.5rem;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 1rem;
@@ -61,36 +66,86 @@ body {
     display: flex;
     flex: 1.3;
     background-color: blueiolet;
-    margin: 0.7rem;
     border-radius: 3rem;
 }
 
-.inner.operationKeys {
-    flex: 1.3;
+.inner.key {
+    font-size: xx-large;
+    border: solid;
+    color: rgb(219, 0, 0);   
 }
+
 .numKeysDiv {
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex: 4;
 }
 
 .numKeys {
     flex: 6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: lighter;
+    width: 89%;
+    padding-left: 1rem;
 }
 
 .outer.operationKeys {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.082);
 }
 
 .key {
     color: white;
     font-weight: bolder;
     font-size: 1.6rem;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50%;
     border: none;
     background-color: rgba(245, 245, 245, 0);
+    transition: color 0.6s ;
+}
+
+.key.active:hover {
+    background-color: rgb(24, 24, 31);
+    font-size: xxx-large;
+    border: solid 1px;
+}
+
+.key.active:focus {
+    background-color: yellow;
+    color: black;
+}
+
+input {
+    flex: 1;
+    margin: 0.2rem 1.5rem;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.result {
+    text-align: right;
+}
+
+.history {
+    flex: 3;
+    margin-top: 1rem;
+    font-size: 1rem;
+    white-space: pre-line;
+}
+
+.mid {
+    flex: 0.5;
+    font-size: 1.3rem;
+    text-align: right;
 }
