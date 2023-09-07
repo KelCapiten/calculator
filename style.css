@@ -140,12 +140,12 @@ input {
 .history {
     flex: 3;
     margin-top: 1rem;
-    font-size: 5rem;
+    font-size: 3rem;
     white-space: pre-line;
 }
 
 .mid {
     flex: 0.5;
-    font-size: 2.5rem;
     text-align: right;
+    font-size: 0.98rem;
 }
